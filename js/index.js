@@ -48,11 +48,17 @@ function funcionAgregar() {
             ingresos+=montoTransaccion;
             balance+=montoTransaccion;
             document.getElementById("ingresos").innerHTML ="+" + ingresos;
-            llenarIngreso();
+            document.ready = selector.value = "";
+            document.ready = montor.value = "";
+            document.ready = descriptor.value = "";
+                llenarIngreso();
         } else if (tipoTransaccion == "Egreso"){
             egresos+=montoTransaccion;
             balance-=montoTransaccion;
             document.getElementById("egresos").innerHTML = "-" + egresos;
+            document.ready = selector.value = "";
+            document.ready = montor.value = "";
+            document.ready = descriptor.value = "";
             llenarEgreso();
         } 
         porcentaje = Math.round((egresos * 100) / ingresos);
