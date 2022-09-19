@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="tittle"></title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">
+
+            <div class="titulo">
+                <h1 id="txtPrincipal">Presupuesto de \n -mes- 2020</h1>
+            </div>
+
+            <div class="balance">
+                <h1 id="txtBalance">+0</h1>
+                <div class="ingresos">
+                    <h2>Ingresos:</h2>
+                    <h2 id="ingresos">+0</h2>
+                </div>
+                <div class="egresos">
+                    <h2>Egresos:</h2>
+                    <h2 id="egresos">-0</h2>
+                </div>
+                <div class="Porcentaje">
+                    <h2>Porcentaje de gastos:</h2>
+                    <h2 id="porcentajeGastos"  class="porcentajeGastos">0%</h2>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="footers">
+                <h1>Transacción</h1>
+                <select title="tipo" id="tipoTransaccion" class="tipoTransaccion">
+                    <option value="" disabled selected id="placeHolder">Ingreso | Egreso</option>
+                    <option value="Ingreso">Ingreso</option>
+                    <option value="Egreso">Egreso</option>
+                </select>
+                <br>
+                <input type="text" name="descripcion" placeholder="Descripcion" id="descripcionTransaccion" class="descripcionTransaccion" required>
+                <br>
+                <input type="number" name="monto" placeholder="Monto" id="montoTransaccion" class="montoTransaccion" required>
+                <br>
+                <button type="button" onclick="funcionAgregar()" id="agregar" class="agregar">Agregar</button>
+            </div>
+            <div class="footers">
+                <div class="buttons">                
+                    <button type="button" onclick="funcionIngresos()" id="btnIngresos" class="btnIngresos">Ingresos</button>
+                    <button type="button" onclick="funcionEgresos()" id="btnEgresos" class="btnEgresos">Egresos</button>
+                </div>
+                <ul id="listaingeg">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="js/index.js"></script>
+</html>
