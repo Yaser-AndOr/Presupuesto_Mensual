@@ -35,7 +35,7 @@ function funcionAgregar() {
         alert("Favor seleccionar el tipo de transaccion");
     } else if (descripcionTransaccion == ""){
         alert("Favor llenar la casilla descripción");
-    } else if (montoTransaccion <= 0){
+    } else if (montoTransaccion <= 0 && montoTransaccion !=""){
         alert("Favor insertar una cifra positiva en la casilla \"Monto\"")
     } else{
         var nuevo = {
@@ -119,7 +119,7 @@ function llenarIngreso() {
 
 function llenarEgreso() {
     if (opcionLista == 0){
-        llenarEgreso();
+        llenarIngreso();
     }
     else{
         limpiarLista();
